@@ -4,7 +4,7 @@ from urllib.parse import urlparse, parse_qs
 import pandas as pd
 from io import StringIO
 from pathlib import Path
-from getter import Getter
+from src.getter import Getter
 
 
 class OptionDataDownloader:

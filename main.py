@@ -1,7 +1,7 @@
 import time
 from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
-from option_data_downloader import OptionDataDownloader
+from src.option_data_downloader import OptionDataDownloader
 
 def fetch_moex_data(tickers, path='data'):
     """Download options trading data from MOEX website and save to CSV files."""
