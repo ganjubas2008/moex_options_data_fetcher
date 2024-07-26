@@ -1,0 +1,4 @@
+data/
+__pycache__/
+fetcher.log
+fetcher.pid
