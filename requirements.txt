@@ -1,0 +1,9 @@
+beautifulsoup4
+requests
+selenium
+webdriver_manager
+fp
+pandas
+tinkoff-invest
+tinkoff-investments
+tinvest
