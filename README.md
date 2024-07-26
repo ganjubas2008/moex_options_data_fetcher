@@ -9,3 +9,8 @@ How to stop:
 ```sh
 chmod +x stop_fetcher.sh
 ```
+
+Requirements:
+```sh
+pip install -r requirements.txt
+```
