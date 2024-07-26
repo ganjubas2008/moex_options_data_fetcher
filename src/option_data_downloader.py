@@ -20,8 +20,8 @@ class OptionDataDownloader:
 
     def _get_csv_links(self, url):
         """Extract links to CSV files with options data from the URL."""
-        html_content = Getter(use_proxy=True, use_selenium=True, service=self.service).get(url)
-        soup = BeautifulSoup(html_content, 'html.parser')
+        html = Getter(use_proxy=False, use_selenium=False, service=self.service).get(url)
+        soup = BeautifulSoup(html.content, 'html.parser')
         links = soup.find_all('a', href=True)
         csv_links = [link for link in links if 'CSV' in (link.get_text() or '')]
         return csv_links

@@ -1,12 +1,12 @@
 import time
 from datetime import datetime, timedelta
-from selenium.webdriver.firefox.service import Service
-from webdriver_manager.firefox import GeckoDriverManager
+# from selenium.webdriver.firefox.service import Service
+# from webdriver_manager.firefox import GeckoDriverManager
 from src.option_data_downloader import OptionDataDownloader
 
 def fetch_moex_data(tickers, base_path='data'):
     """Download options trading data from MOEX website and save to CSV files."""
-    service = Service(GeckoDriverManager().install())
+    service = None # Service(GeckoDriverManager().install())
     odd = OptionDataDownloader(service=service)
     
     now = datetime.now()
