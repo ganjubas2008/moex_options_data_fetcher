@@ -12,5 +12,12 @@ chmod +x stop_fetcher.sh
 
 Requirements:
 ```sh
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
+
+Firefox installation necessary for selenium
+```sh
+sudo apt-get install firefox -y
+```
+
+
