@@ -3,5 +3,9 @@ Downloads options trading data from the MOEX website and saves it to CSV files. 
 How to run:
 ```sh
 chmod +x run_fetcher.sh
+```
+
+How to stop:
+```sh
 chmod +x stop_fetcher.sh
 ```
