@@ -30,7 +30,7 @@ def wait_until_next_interval():
     next_minute = (now.minute // 15 + 1) * 15
     if next_minute == 60:
         next_minute = 0
-        next_hour = now.hour + 1
+        next_hour = (now.hour + 1) % 24
         next_time = now.replace(hour=next_hour, minute=next_minute, second=0, microsecond=0)
     else:
         next_time = now.replace(minute=next_minute, second=0, microsecond=0)

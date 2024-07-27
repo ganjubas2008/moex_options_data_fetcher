@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from selenium.webdriver.firefox.service import Service
+# from selenium.webdriver.firefox.service import Service
 from urllib.parse import urlparse, parse_qs
 import pandas as pd
 from io import StringIO
@@ -20,7 +20,7 @@ class OptionDataDownloader:
 
     def _get_csv_links(self, url):
         """Extract links to CSV files with options data from the URL."""
-        html = Getter(use_proxy=False, use_selenium=False, service=self.service).get(url)
+        html = Getter(use_proxy=True, use_selenium=False, service=self.service, verify=True).get(url)
         soup = BeautifulSoup(html.content, 'html.parser')
         links = soup.find_all('a', href=True)
         csv_links = [link for link in links if 'CSV' in (link.get_text() or '')]
