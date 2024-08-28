@@ -3,13 +3,15 @@ from datetime import datetime, timedelta
 # from selenium.webdriver.firefox.service import Service
 # from webdriver_manager.firefox import GeckoDriverManager
 from src.option_data_downloader import OptionDataDownloader
+from pytz import timezone
+
 
 def fetch_moex_data(tickers, base_path='data'):
     """Download options trading data from MOEX website and save to CSV files."""
     service = None # Service(GeckoDriverManager().install())
     odd = OptionDataDownloader(service=service)
     
-    now = datetime.now()
+    now = datetime.now(tz=timezone('Europe/Moscow'))
     rounded_minute = (now.minute // 15) * 15
     rounded_time = now.replace(minute=rounded_minute, second=0, microsecond=0)
     timestamp = rounded_time.strftime('%Y%m%d_%H%M')
@@ -40,10 +42,10 @@ def wait_until_next_interval():
     time.sleep(max(0, wait_time))
 
 if __name__ == '__main__':
-    tickers = [
+    tickers = ['IMOEX',
         'ABIO', 'AFKS', 'AFLT', 'ALRS', 'ASTR', 'CHMF', 'DIAS', 'FEES', 'GMKN', 'IRAO', 'MAGN', 'MGNT',
         'MOEX', 'MSNG', 'MTLR', 'MTSS', 'NLMK', 'NVTK', 'PHOR', 'PIKK', 'PLZL', 'POSI', 'ROSN', 'RTKM',
-        'RUAL', 'SBERP', 'SMLT', 'SNGS', 'SNGSP', 'SVCB', 'TATN', 'TATNP', 'VKCO', 'VTBR'
+        'RUAL', 'SBERP', 'SMLT', 'SNGS', 'SNGSP', 'SVCB', 'TATN', 'TATNP', 'VKCO', 'VTBR', 'YDEX', 'IMOEX', 'TCSG'
     ]
     
     while True:
