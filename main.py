@@ -45,7 +45,8 @@ if __name__ == '__main__':
     tickers = ['IMOEX',
         'ABIO', 'AFKS', 'AFLT', 'ALRS', 'ASTR', 'CHMF', 'DIAS', 'FEES', 'GMKN', 'IRAO', 'MAGN', 'MGNT',
         'MOEX', 'MSNG', 'MTLR', 'MTSS', 'NLMK', 'NVTK', 'PHOR', 'PIKK', 'PLZL', 'POSI', 'ROSN', 'RTKM',
-        'RUAL', 'SBERP', 'SMLT', 'SNGS', 'SNGSP', 'SVCB', 'TATN', 'TATNP', 'VKCO', 'VTBR', 'YDEX', 'IMOEX', 'TCSG'
+        'RUAL', 'SBERP', 'SMLT', 'SNGS', 'SNGSP', 'SVCB', 'TATN', 'TATNP', 'VKCO', 'VTBR', 'YDEX',
+        'IMOEX', 'TCSG', 'SBER', 'OZON', 'GAZP', 'LKOH'
     ]
     
     while True:
